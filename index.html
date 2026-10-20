@@ -1,1 +1,502 @@
-<!DOCTYPE html><html lang="lv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kapibaras laukumu ekspedīcija</title><style>:root{--b:#07111f;--p:#111827;--c:#1f2937;--t:#f8fafc;--m:#cbd5e1;--a:#f59e0b;--g:#22c55e;--x:#38bdf8;--r:#ef4444}*{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,sans-serif;color:var(--t);background:radial-gradient(circle at top,#172554,#07111f 62%);min-height:100vh}body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 20px 30px,#fff5,transparent),radial-gradient(1px 1px at 90px 70px,#fff4,transparent),radial-gradient(2px 2px at 150px 35px,#67e8f955,transparent);background-size:210px 120px;animation:stars 28s linear infinite}@keyframes stars{to{transform:translateY(120px)}}@keyframes bob{50%{transform:translateY(-7px)}}.w{max-width:1080px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}.hero{display:flex;gap:14px;align-items:center}.hero .av{font-size:64px;animation:bob 2.5s ease-in-out infinite}.tag{display:inline-block;padding:6px 10px;border:1px solid #334155;border-radius:999px;color:var(--m);font-size:12px;font-weight:800}.panel{background:#111827ec;border:1px solid #334155;border-radius:22px;padding:18px;margin:14px 0;box-shadow:0 14px 30px #0005}.btn{border:0;border-radius:14px;padding:12px 16px;font-weight:800;cursor:pointer}.pri{background:linear-gradient(135deg,#f59e0b,#fbbf24);color:#111827}.gh{background:#0f172a;color:var(--t);border:1px solid #475569}.good{background:linear-gradient(135deg,#34d399,#22c55e);color:#052e16}.btn:disabled{opacity:.4;cursor:not-allowed}.grid{display:grid;gap:12px}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:1fr 1fr}@media(max-width:760px){.g4,.g2{grid-template-columns:1fr 1fr}}@media(max-width:460px){.g4,.g2{grid-template-columns:1fr}}.card{position:relative;background:linear-gradient(#1f2937,#111827);border:1px solid #475569;border-radius:18px;padding:15px;color:var(--t);text-align:left}.zone{min-height:150px;cursor:pointer}.zone:hover{border-color:#94a3b8;transform:translateY(-2px)}.ico{font-size:34px}.lock{position:absolute;right:12px;top:10px}.small{font-size:13px;color:var(--m)}.stats{display:flex;gap:8px;flex-wrap:wrap}.stat{background:#0b1220;border:1px solid #334155;border-radius:14px;padding:8px 12px;text-align:center;min-width:82px}.stat b{display:block;font-size:22px}.hidden{display:none!important}.bar{height:10px;background:#1e293b;border-radius:999px;overflow:hidden;margin:14px 0}.fill{height:100%;width:0;background:linear-gradient(90deg,#38bdf8,#22c55e,#f59e0b);transition:.3s}.ans{display:grid;gap:9px}.ans button{padding:12px;border-radius:14px;border:1px solid #475569;background:#0f172a;color:var(--t);text-align:left;font-weight:700;cursor:pointer}.help{background:#172554;border:1px solid #3b82f6;border-radius:14px;padding:12px;margin-top:12px}.formula{background:#0b1220;border:1px solid #334155;border-radius:16px;padding:16px;text-align:center;font-size:26px;font-weight:900}.viz{display:grid;place-items:center;min-height:150px}.viz svg{max-width:340px;width:100%}.qr{background:white;border-radius:18px;padding:14px;display:grid;place-items:center;min-height:230px}.qr img{max-width:210px;width:75%}.trophy{font-size:72px;animation:bob 1.3s ease-in-out infinite}input{background:#0b1220;border:1px solid #475569;border-radius:12px;padding:12px;color:white;font-size:16px}h1{margin:2px 0 6px;font-size:clamp(28px,5vw,46px)}h2{margin:8px 0}p{line-height:1.45}</style></head><body><div class="w"><div class="top"><div class="hero"><div class="av">🦫</div><div><div class="tag">9. klase · 15 minūšu spēle · 18 uzdevumi</div><h1>Kapibaras laukumu ekspedīcija</h1><div class="small">Kapi un pūce Formula ved cauri 4 zonām, 2 dārgumu lādēm un Gala Sargam.</div></div></div><div><button id="tTab" class="btn pri">Skolotāja režīms</button> <button id="sTab" class="btn gh">Skolēna režīms</button></div></div><section id="teacher"><div class="grid g2"><div class="panel"><h2>🗺️ Misijas struktūra</h2><div class="grid g2"><div class="card">▱ Paralelograms<br><span class="small">3 nejauši uzdevumi</span></div><div class="card">△ Trijstūris<br><span class="small">3 nejauši uzdevumi</span></div><div class="card">◇ Rombs<br><span class="small">3 nejauši uzdevumi</span></div><div class="card">⏢ Trapece<br><span class="small">3 nejauši uzdevumi</span></div><div class="card">📦 Lāde I<br><span class="small">2 jaukti uzdevumi</span></div><div class="card">🎁 Lāde II<br><span class="small">2 jaukti uzdevumi</span></div><div class="card">🗿 Gala Sargs<br><span class="small">2 sarežģītāki uzdevumi</span></div></div><p><b>Kopā: 18 uzdevumi.</b> Iekļauti laukuma aprēķini, nezināma lieluma atrašana, decimālskaitļi, kļūdu analīze un mērvienības.</p><button id="demo" class="btn good">Atvērt skolēna demonstrāciju</button></div><div class="panel"><h2>QR skolēniem</h2><div class="qr"><img id="qr"><span id="qrf">QR parādīsies tiešsaistē</span></div><div id="url" class="small"></div></div></div></section><section id="student" class="hidden"><div class="panel top"><div><div class="small">Ekspedīcijas dalībnieks</div><input id="name" value="Skolēns"> <button id="start" class="btn pri">Sākt</button></div><div class="stats"><div class="stat">❤️<b id="life">3</b></div><div class="stat">🔑<b id="keys">0/4</b></div><div class="stat">📦<b id="chests">0/2</b></div><div class="stat">💎<b id="score">10</b></div></div></div><div id="map" class="panel"><div class="top"><div><h2>Figūru templis</h2><div id="who" class="small">Sāc misiju</div></div><div class="tag">Progress <span id="pct">0%</span></div></div><div class="bar"><div id="fill" class="fill"></div></div><div class="grid g4"><button class="card zone" data-z="0" disabled><span class="lock">🔒</span><div class="ico">▱</div><b>Slīpais kanjons</b><div class="small">Paralelograms · 3 uzdevumi</div></button><button class="card zone" data-z="1" disabled><span class="lock">🔒</span><div class="ico">△</div><b>Pusmēness grava</b><div class="small">Trijstūris · 3 uzdevumi</div></button><button class="card zone" data-z="2" disabled><span class="lock">🔒</span><div class="ico">◇</div><b>Diagonāļu velve</b><div class="small">Rombs · 3 uzdevumi</div></button><button class="card zone" data-z="3" disabled><span class="lock">🔒</span><div class="ico">⏢</div><b>Trapeces tilts</b><div class="small">Trapece · 3 uzdevumi</div></button></div><div class="grid g2" style="margin-top:12px"><button id="c1" class="card zone" disabled><span class="lock">🔒</span><div class="ico">📦</div><b>Dārgumu lāde I</b><div class="small">2 uzdevumi · atveras pēc 2 atslēgām</div></button><button id="c2" class="card zone" disabled><span class="lock">🔒</span><div class="ico">🎁</div><b>Dārgumu lāde II</b><div class="small">2 uzdevumi · atveras pēc 4 atslēgām</div></button></div><button id="boss" class="btn gh" style="width:100%;margin-top:12px" disabled>🔒 Gala Sargs</button></div><div id="challenge" class="panel hidden"><div class="top"><div><div id="ctag" class="tag"></div><h2 id="ctitle"></h2></div><button id="back" class="btn gh">← Karte</button></div><div id="viz" class="viz"></div><p id="q" style="font-size:20px"></p><div id="answers" class="ans"></div><div style="margin-top:12px"><button id="hint" class="btn gh">💡 Mājiens (-1)</button> <button id="form" class="btn gh">📜 Formula</button> <button id="support" class="btn gh">🦉 5.6 atbalsts</button></div><div id="help" class="help hidden"></div><div id="feed" style="margin-top:12px;font-weight:800"></div></div><div id="victory" class="panel hidden" style="text-align:center"><div class="trophy">🏆</div><h2>Templis atvērts!</h2><p id="vtxt"></p><div id="rank" class="formula"></div><p>Parādi šo ekrānu skolotājai.</p><button id="again" class="btn pri">Spēlēt vēlreiz</button></div></section></div><script>const $=s=>document.querySelector(s),sh=a=>a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]);const V={p:'<svg viewBox="0 0 320 160"><polygon points="60,125 245,125 285,45 100,45" fill="none" stroke="#fbbf24" stroke-width="4"/><line x1="100" y1="45" x2="100" y2="125" stroke="#67e8f9" stroke-width="3" stroke-dasharray="7 5"/><text x="145" y="150" fill="white">a</text><text x="108" y="88" fill="white">hₐ</text></svg>',t:'<svg viewBox="0 0 320 170"><polygon points="45,130 270,130 210,40" fill="none" stroke="#fbbf24" stroke-width="4"/><line x1="210" y1="40" x2="210" y2="130" stroke="#67e8f9" stroke-width="3" stroke-dasharray="7 5"/><text x="145" y="155" fill="white">a</text><text x="218" y="90" fill="white">hₐ</text></svg>',r:'<svg viewBox="0 0 320 180"><polygon points="160,25 280,90 160,155 40,90" fill="none" stroke="#fbbf24" stroke-width="4"/><line x1="40" y1="90" x2="280" y2="90" stroke="#67e8f9" stroke-width="3"/><line x1="160" y1="25" x2="160" y2="155" stroke="#a78bfa" stroke-width="3"/><text x="195" y="82" fill="white">d₁</text><text x="168" y="55" fill="white">d₂</text></svg>',z:'<svg viewBox="0 0 320 180"><polygon points="75,130 260,130 220,50 120,50" fill="none" stroke="#fbbf24" stroke-width="4"/><line x1="120" y1="50" x2="120" y2="130" stroke="#67e8f9" stroke-width="3" stroke-dasharray="7 5"/><text x="160" y="43" fill="white">a</text><text x="160" y="155" fill="white">b</text><text x="128" y="95" fill="white">h</text></svg>',c:'<div style="font-size:86px">📦</div>',b:'<div style="font-size:86px">🗿</div>'};function Q(tag,title,text,answers,correct,hint,formula,support,visual){return{tag,title,text,answers,correct,hint,formula,support,visual}}const B=[ [Q('Paralelograms','Slīpais kanjons','a = 8 cm, hₐ = 5 cm. Aprēķini laukumu.',['40 cm²','20 cm²','13 cm²'],0,'Pamats reiz augstums.','S = a · hₐ','8 × 5 = 40.',V.p),Q('Paralelograms','Slīpais kanjons','S = 54 cm², a = 9 cm. Nosaki hₐ.',['6 cm','5 cm','9 cm'],0,'hₐ = S : a.','hₐ = S/a','54 : 9 = 6.',V.p),Q('Paralelograms','Slīpais kanjons','a = 7,5 cm, hₐ = 4 cm. Aprēķini laukumu.',['30 cm²','15 cm²','11,5 cm²'],0,'Reizini 7,5 un 4.','S = a · hₐ','7,5 × 4 = 30.',V.p),Q('Paralelograms','Kļūdu medības','Skolēns raksta S = 9 · 6 = 54 cm. Kas nav pareizi?',['Mērvienība','Aprēķins','Formula'],0,'Laukumam vajag kvadrātvienības.','S = a · hₐ','Pareizi ir 54 cm².',V.p),Q('Paralelograms','Slīpais kanjons','Kuri lielumi vajadzīgi laukuma aprēķinam?',['Pamats un augstums','Divas malas','Divas diagonāles'],0,'Meklē perpendikulāro augstumu.','S = a · hₐ','Pamats + atbilstošais augstums.',V.p),Q('Paralelograms','Slīpais kanjons','a = 12 m, hₐ = 7 m. Laukums ir...',['84 m²','42 m²','19 m²'],0,'12 × 7.','S = a · hₐ','12 × 7 = 84.',V.p)], [Q('Trijstūris','Pusmēness grava','a = 10 cm, hₐ = 6 cm. Aprēķini laukumu.',['30 cm²','60 cm²','16 cm²'],0,'Reizini un dali ar 2.','S = a·hₐ/2','10×6=60; 60:2=30.',V.t),Q('Trijstūris','Pusmēness grava','S = 24 cm², hₐ = 6 cm. Nosaki a.',['8 cm','4 cm','12 cm'],0,'a = 2S : hₐ.','a = 2S/hₐ','48 : 6 = 8.',V.t),Q('Trijstūris','Pusmēness grava','S = 45 cm², a = 15 cm. Nosaki hₐ.',['6 cm','3 cm','9 cm'],0,'hₐ = 2S : a.','hₐ = 2S/a','90 : 15 = 6.',V.t),Q('Trijstūris','Kļūdu medības','Skolēns trijstūrim raksta S = 8 · 5 = 40 cm². Kļūda ir...',['Nav dalīts ar 2','Nav saskaitīts','Nav reizināts ar 2'],0,'Trijstūris ir puse no paralelograma.','S = a·hₐ/2','40 : 2 = 20 cm².',V.t),Q('Trijstūris','Pusmēness grava','Kāpēc formulā ir dalījums ar 2?',['Trijstūris ir puse no atbilstoša paralelograma','Jo ir 2 malas','Jo ir 2 augstumi'],0,'Iedomājies divus vienādus trijstūrus.','S = a·hₐ/2','Divi vienādi trijstūri veido paralelogramu.',V.t),Q('Trijstūris','Pusmēness grava','a = 14 m, hₐ = 5 m. Laukums ir...',['35 m²','70 m²','19 m²'],0,'14×5=70, tad :2.','S = a·hₐ/2','70 : 2 = 35.',V.t)], [Q('Rombs','Diagonāļu velve','d₁ = 10 cm, d₂ = 8 cm. Aprēķini laukumu.',['40 cm²','80 cm²','18 cm²'],0,'Reizini diagonāles un dali ar 2.','S = d₁d₂/2','10×8=80; 80:2=40.',V.r),Q('Rombs','Diagonāļu velve','S = 36 cm², d₁ = 9 cm. Nosaki d₂.',['8 cm','4 cm','16 cm'],0,'d₂ = 2S : d₁.','d₂ = 2S/d₁','72 : 9 = 8.',V.r),Q('Rombs','Diagonāļu velve','S = 63 cm², d₁ = 14 cm. Nosaki d₂.',['9 cm','7 cm','4,5 cm'],0,'2S = 126.','d₂ = 2S/d₁','126 : 14 = 9.',V.r),Q('Rombs','Kļūdu medības','d₁=8 cm, d₂=5 cm. Skolēns iegūst 40 cm². Kļūda ir...',['Nav dalīts ar 2','Nav saskaitīts','Nav reizināts ar augstumu'],0,'Diagonāļu reizinājums ir divreiz lielāks.','S=d₁d₂/2','40 : 2 = 20 cm².',V.r),Q('Rombs','Diagonāļu velve','Pareizā formula romba laukuma aprēķinam ar diagonālēm ir...',['S=d₁d₂/2','S=d₁+d₂','S=2d₁d₂'],0,'Atceries dalījumu ar 2.','S=d₁d₂/2','Romba diagonāļu reizinājumu dala ar 2.',V.r),Q('Rombs','Diagonāļu velve','d₁=14 dm, d₂=6 dm. Laukums ir...',['42 dm²','84 dm²','20 dm²'],0,'14×6=84; :2.','S=d₁d₂/2','84 : 2 = 42.',V.r)], [Q('Trapece','Trapeces tilts','a=8 cm, b=14 cm, h=5 cm. Aprēķini laukumu.',['55 cm²','110 cm²','27,5 cm²'],0,'Saskaiti pamatus, reizini ar h, dali ar 2.','S=(a+b)h/2','22×5=110; :2=55.',V.z),Q('Trapece','Trapeces tilts','S=36 m², a=4 m, b=8 m. Nosaki h.',['6 m','8 m','3 m'],0,'h=2S:(a+b).','h=2S/(a+b)','72 : 12 = 6.',V.z),Q('Trapece','Trapeces tilts','S=60 cm², h=5 cm, a=8 cm. Nosaki b.',['16 cm','12 cm','24 cm'],0,'a+b = 2S:h.','a+b=2S/h','120:5=24; b=24-8=16.',V.z),Q('Trapece','Kļūdu medības','Skolēns raksta (6+10)·4 = 64. Pareizais laukums ir...',['32','64','16'],0,'Vēl jādala ar 2.','S=(a+b)h/2','64 : 2 = 32.',V.z),Q('Trapece','Trapeces tilts','a=7,5 cm, b=12,5 cm, h=6 cm. Laukums ir...',['60 cm²','120 cm²','37,5 cm²'],0,'7,5+12,5=20.','S=(a+b)h/2','20×6=120; :2=60.',V.z),Q('Trapece','Trapeces tilts','Kuru darbību visbiežāk aizmirst?',['Dalīt ar 2','Reizināt pamatus','Saskaitīt augstumu'],0,'Formula beidzas ar /2.','S=(a+b)h/2','Pēc reizināšanas dala ar 2.',V.z)] ];const C=[Q('Lāde','Noslēpumu lāde','Ja malas dotas centimetros, laukuma mērvienība ir...',['cm²','cm','cm³'],0,'Laukums ir divdimensionāls.','cm²','Kvadrātcentimetri.',V.c),Q('Lāde','Jauktais izaicinājums','Kurā figūrā izmanto diagonāles d₁ un d₂?',['Rombā','Trijstūrī','Trapecē'],0,'Domā par romba formulu.','S=d₁d₂/2','Diagonāļu formula ir rombam.',V.c),Q('Lāde','Noslēpumu lāde','Kurai figūrai formula ir S=a·hₐ?',['Paralelogramam','Trijstūrim','Trapeces'],0,'Nav dalījuma ar 2.','S=a·hₐ','Tas ir paralelograms.',V.c),Q('Lāde','Noslēpumu lāde','Trijstūra S=18 cm², a=9 cm. hₐ ir...',['4 cm','2 cm','6 cm'],0,'hₐ=2S:a.','hₐ=2S/a','36:9=4.',V.c),Q('Lāde','Noslēpumu lāde','Romba S=24 dm², d₁=6 dm. d₂ ir...',['8 dm','4 dm','6 dm'],0,'d₂=2S:d₁.','d₂=2S/d₁','48:6=8.',V.c),Q('Lāde','Formulu medības','Kurā formulā izmantoti abi trapeces pamati?',['S=(a+b)h/2','S=ah','S=d₁d₂/2'],0,'Meklē a+b.','S=(a+b)h/2','Trapeces formulā ir abi pamati.',V.c),Q('Lāde','Kļūdu medības','Skolēns laukuma atbildē raksta 48 cm. Kas jāmaina?',['cm uz cm²','48 uz 24','cm uz cm³'],0,'Laukuma vienība ir kvadrātvienība.','cm²','Pareizi: 48 cm².',V.c),Q('Lāde','Jauktais izaicinājums','Kuram uzdevumam jāizmanto dalīšana ar 2?',['Romba diagonāļu laukuma formulai','Paralelograma S=ah','Augstuma noteikšanai no S=ah'],0,'Romba diagonāļu formulā ir /2.','S=d₁d₂/2','Pareizi ir rombs.',V.c)];const G=[Q('Gala Sargs','Pēdējais pārbaudījums','Trapeces S=84 cm², a=10 cm, b=18 cm. Nosaki h.',['6 cm','3 cm','12 cm'],0,'h=2S:(a+b).','h=2S/(a+b)','168:28=6.',V.b),Q('Gala Sargs','Pēdējais pārbaudījums','Trijstūra S=54 cm², hₐ=9 cm. Nosaki a.',['12 cm','6 cm','18 cm'],0,'a=2S:hₐ.','a=2S/hₐ','108:9=12.',V.b),Q('Gala Sargs','Pēdējais pārbaudījums','Paralelograma S=72 cm², a=8 cm. hₐ ir...',['9 cm','8 cm','10 cm'],0,'hₐ=S:a.','hₐ=S/a','72:8=9.',V.b),Q('Gala Sargs','Pēdējais pārbaudījums','Romba d₁=12 cm, d₂=10 cm. Laukums ir...',['60 cm²','120 cm²','22 cm²'],0,'Reizini un dali ar 2.','S=d₁d₂/2','120:2=60.',V.b)];let S={start:false,name:'Skolēns',life:3,keys:0,chests:0,score:10,zp:[0,0,0,0],zc:[0,0,0,0],cp:[0,0],cc:[0,0],bp:0,boss:false,sel:[],cs:[],gs:[],cur:null};function reset(){S.life=3;S.keys=0;S.chests=0;S.score=10;S.zp=[0,0,0,0];S.zc=[0,0,0,0];S.cp=[0,0];S.cc=[0,0];S.bp=0;S.boss=false;S.sel=B.map(x=>sh(x).slice(0,3));let cc=sh(C).slice(0,4);S.cs=[cc.slice(0,2),cc.slice(2,4)];S.gs=sh(G).slice(0,2)}function mode(x){$('#teacher').classList.toggle('hidden',x!='t');$('#student').classList.toggle('hidden',x!='s')}$('#tTab').onclick=()=>mode('t');$('#sTab').onclick=()=>mode('s');$('#demo').onclick=()=>mode('s');function progress(){return S.zp.reduce((a,b)=>a+b,0)+S.cp[0]+S.cp[1]+S.bp}function refresh(){$('#life').textContent=S.life;$('#keys').textContent=S.keys+'/4';$('#chests').textContent=S.chests+'/2';$('#score').textContent=S.score;let p=Math.round(progress()/18*100);$('#pct').textContent=p+'%';$('#fill').style.width=p+'%';$('#who').textContent=S.start?S.name+' · turpini ekspedīciju!':'Sāc misiju';document.querySelectorAll('.zone[data-z]').forEach((b,i)=>{b.disabled=!S.start||(i>0&&!S.zc[i-1]);b.querySelector('.lock').textContent=S.zc[i]?'✅':(b.disabled?'🔒':S.zp[i]+'/3')});$('#c1').disabled=!S.start||S.keys<2||S.cc[0];$('#c2').disabled=!S.start||S.keys<4||S.cc[1];$('#c1 .lock').textContent=S.cc[0]?'✅':(S.keys>=2?S.cp[0]+'/2':'🔒');$('#c2 .lock').textContent=S.cc[1]?'✅':(S.keys>=4?S.cp[1]+'/2':'🔒');$('#boss').disabled=!(S.keys==4&&S.chests==2)||S.boss;$('#boss').textContent=S.boss?'✅ Gala Sargs uzvarēts':(S.keys==4&&S.chests==2?'⚔️ Gala Sargs '+S.bp+'/2':'🔒 Gala Sargs — vajag 4 atslēgas un 2 lādes')}function open(q,meta){S.cur={q,meta};$('#map').classList.add('hidden');$('#challenge').classList.remove('hidden');$('#ctag').textContent=q.tag;$('#ctitle').textContent=q.title;$('#q').textContent=q.text;$('#viz').innerHTML=q.visual;$('#feed').textContent='';$('#help').classList.add('hidden');let A=$('#answers');A.innerHTML='';sh(q.answers.map((x,i)=>({x,i}))).forEach((o,j)=>{let b=document.createElement('button');b.innerHTML='<b>'+String.fromCharCode(65+j)+'.</b> '+o.x;b.onclick=()=>check(o.i==q.correct);A.appendChild(b)})}function reward(){let m=S.cur.meta;if(m.t=='z'){S.zp[m.i]++;if(S.zp[m.i]>=3&&!S.zc[m.i]){S.zc[m.i]=1;S.keys++}}if(m.t=='c'){S.cp[m.i]++;if(S.cp[m.i]>=2&&!S.cc[m.i]){S.cc[m.i]=1;S.chests++;S.score+=4}}if(m.t=='b'){S.bp++;if(S.bp>=2)S.boss=true}}function check(ok){if(ok){S.score+=5;reward();$('#feed').textContent='✅ Pareizi! +5 💎';refresh();if(S.cur.meta.t=='b'&&S.boss)setTimeout(win,500);else setTimeout(()=>{$('#challenge').classList.add('hidden');$('#map').classList.remove('hidden')},550)}else{S.life=Math.max(0,S.life-1);S.score=Math.max(0,S.score-1);$('#feed').textContent='❌ Mēģini vēlreiz vai izmanto palīdzību.';if(S.life==0){S.life=1;$('#help').innerHTML='🛟 <b>Glābšanas režīms:</b> '+S.cur.q.support+'<br><b>Formula:</b> '+S.cur.q.formula;$('#help').classList.remove('hidden')}refresh()}}function help(k){let q=S.cur.q;if(k=='h'){S.score=Math.max(0,S.score-1);$('#help').innerHTML='💡 <b>Mājiens:</b> '+q.hint}else if(k=='f')$('#help').innerHTML='📜 <b>Formula:</b> '+q.formula;else $('#help').innerHTML='🦉 <b>Soli pa solim:</b> '+q.support;$('#help').classList.remove('hidden');refresh()}function win(){$('#challenge').classList.add('hidden');$('#victory').classList.remove('hidden');$('#vtxt').textContent=S.name+', Tu izpildīji 18 uzdevumus un sakāvi Gala Sargu! Kristāli: '+S.score+'.';let r='🟢 Gatavs pārbaudes darbam';if(S.score<54)r='🟡 Vēl jāatkārto dažas prasmes';if(S.score<42)r='🔴 Vajadzīgs vēl viens treniņš';$('#rank').textContent=r}$('#start').onclick=()=>{S.name=$('#name').value.trim()||'Skolēns';S.start=true;reset();refresh()};document.querySelectorAll('.zone[data-z]').forEach((b,i)=>b.onclick=()=>open(S.sel[i][S.zp[i]],{t:'z',i}));$('#c1').onclick=()=>open(S.cs[0][S.cp[0]],{t:'c',i:0});$('#c2').onclick=()=>open(S.cs[1][S.cp[1]],{t:'c',i:1});$('#boss').onclick=()=>open(S.gs[S.bp],{t:'b'});$('#back').onclick=()=>{$('#challenge').classList.add('hidden');$('#map').classList.remove('hidden')};$('#hint').onclick=()=>help('h');$('#form').onclick=()=>help('f');$('#support').onclick=()=>help('s');$('#again').onclick=()=>{$('#victory').classList.add('hidden');$('#map').classList.remove('hidden');reset();refresh()};let u=location.href;$('#url').textContent=u;if(!u.startsWith('file:')){$('#qrf').remove();$('#qr').src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='+encodeURIComponent(u)}else $('#qr').style.display='none';reset();refresh();</script></body></html>
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kapibaras trase — laukumu ekspedīcija</title>
+<style>
+:root{
+  --bg:#07111f;
+  --panel:#0f172adf;
+  --card:#111c31;
+  --line:#334155;
+  --text:#f8fafc;
+  --muted:#cbd5e1;
+  --accent:#f59e0b;
+  --accent2:#fbbf24;
+  --green:#22c55e;
+  --red:#ef4444;
+  --cyan:#38bdf8;
+  --violet:#a78bfa;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#0b1328,#07111f);min-height:100%}
+body{overflow-x:hidden}
+button,input{font:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:18px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:18px;margin:12px 0;backdrop-filter:blur(8px);box-shadow:0 12px 28px #00000026}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:#0b1220;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+h1{margin:6px 0 8px;font-size:clamp(28px,4.8vw,46px)}
+.sub{max-width:770px;color:var(--muted);line-height:1.5}
+.btn{border:0;border-radius:16px;padding:12px 16px;font-weight:800;cursor:pointer;transition:.18s transform,.18s opacity,.18s box-shadow;box-shadow:0 10px 18px #0002}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#111827}
+.btn.ghost{background:#101928;color:var(--text);border:1px solid var(--line)}
+.btn.good{background:linear-gradient(135deg,#34d399,#22c55e);color:#052e16}
+.btn.warn{background:linear-gradient(135deg,#38bdf8,#a78bfa);color:#111827}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.hidden{display:none!important}
+.grid{display:grid;gap:14px}
+.grid.two{grid-template-columns:1.1fr .9fr}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.grid.four{grid-template-columns:repeat(4,1fr)}
+@media(max-width:980px){.grid.two,.grid.three{grid-template-columns:1fr}}
+@media(max-width:760px){.grid.four{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.grid.four{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,#142037,#0e1728);border:1px solid #475569;border-radius:20px;padding:14px}
+.stats{display:flex;gap:10px;flex-wrap:wrap}
+.stat{min-width:92px;background:#0b1220;border:1px solid var(--line);border-radius:16px;padding:10px 12px;text-align:center}
+.stat .v{display:block;font-size:24px;font-weight:900;margin-top:2px}
+.selector{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:10px}
+.option{background:#101928;border:1px solid #475569;border-radius:18px;padding:12px;text-align:center;cursor:pointer;transition:.18s border-color,.18s transform,.18s box-shadow}
+.option:hover{transform:translateY(-1px);border-color:#94a3b8}
+.option.selected{border-color:var(--accent);box-shadow:0 0 0 2px #f59e0b40}
+.option .big{font-size:34px;display:block;margin-bottom:6px}
+.teacherQr{display:grid;place-items:center;min-height:240px;background:#fff;border-radius:18px;overflow:hidden}
+.teacherQr img{width:75%;max-width:220px}
+.small{font-size:14px;color:var(--muted)}
+.mapWrap{position:relative;background:linear-gradient(180deg,#123524,#164e63);border:1px solid #4b5563;border-radius:24px;min-height:470px;overflow:hidden}
+.mapDeco{position:absolute;opacity:.85;font-size:28px;filter:drop-shadow(0 2px 3px #0006)}
+.roadSvg{position:absolute;inset:0;width:100%;height:100%}
+.node{position:absolute;width:44px;height:44px;border-radius:50%;border:3px solid #fff;background:#1e293b;display:grid;place-items:center;font-weight:900;box-shadow:0 6px 16px #0003;transform:translate(-50%,-50%);z-index:2}
+.node.done{background:linear-gradient(135deg,#22c55e,#34d399)}
+.node.current{background:linear-gradient(135deg,#f59e0b,#fbbf24);color:#111827;animation:pulse 1.3s infinite}
+.node.locked{background:#334155;color:#cbd5e1}
+.nodeLabel{position:absolute;transform:translate(-50%,10px);font-size:12px;font-weight:700;background:#0f172acc;padding:4px 8px;border-radius:999px;border:1px solid #475569;white-space:nowrap;z-index:2}
+@keyframes pulse{0%{box-shadow:0 0 0 0 #f59e0b66}70%{box-shadow:0 0 0 16px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.token{position:absolute;z-index:5;transform:translate(-50%,-50%);transition:left .6s ease,top .6s ease}
+.token .avatarBubble{position:absolute;left:50%;top:-30px;transform:translateX(-50%);width:42px;height:42px;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center;font-size:24px;border:3px solid #0f172a}
+.token .car{font-size:34px;filter:drop-shadow(0 4px 4px #0007)}
+.trackLegend{display:flex;flex-wrap:wrap;gap:8px}
+.legendItem{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:#0b1220;font-size:12px;font-weight:700}
+.answers{display:grid;gap:10px;margin-top:14px}
+.answer{padding:13px;border-radius:16px;border:1px solid #475569;background:#101928;color:var(--text);text-align:left;cursor:pointer;font-weight:700}
+.answer:hover{border-color:#94a3b8}
+.formula{font-size:clamp(20px,3vw,32px);font-weight:900;text-align:center;background:#0b1220;border:1px solid var(--line);border-radius:18px;padding:16px}
+.help{background:#172554;border:1px solid #3b82f6;border-radius:16px;padding:14px;margin-top:12px;line-height:1.5}
+.feedback{font-weight:800;margin-top:14px;line-height:1.4}
+.quest{font-size:20px;line-height:1.5}
+.callout{padding:12px 14px;border-left:4px solid var(--accent);background:#111827aa;border-radius:12px}
+
+.certificate{background:linear-gradient(180deg,#fffdf5,#fff7d6);color:#1f2937;border:10px double #d4a017;border-radius:26px;padding:28px;box-shadow:0 16px 40px #0005;max-width:820px;margin:18px auto;text-align:center;position:relative;overflow:hidden}
+.certificate:before,.certificate:after{content:'✦';position:absolute;font-size:54px;color:#d4a01755}.certificate:before{left:18px;top:10px}.certificate:after{right:18px;bottom:8px}
+.certificate h2{font-size:34px;margin:0 0 8px;color:#7c2d12}.certificate .certName{font-size:38px;font-weight:900;margin:18px 0;color:#111827}.certificate .certScore{font-size:22px;margin:12px 0}.certificate .certRank{font-size:24px;font-weight:800;margin:14px auto;padding:12px 16px;border-radius:16px;background:#fff3c4;display:inline-block}.certificate .certMeta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:28px;font-size:14px}.certificate .seal{font-size:54px;margin:8px 0}
+@media print{body *{visibility:hidden!important}.certificate,.certificate *{visibility:visible!important}.certificate{position:absolute;left:0;top:0;width:100%;max-width:none;margin:0;border:10px double #d4a017;box-shadow:none}.noPrint{display:none!important}}
+footer{text-align:center;color:#94a3b8;font-size:12px;padding:10px 0 4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="badge">9. klase · trases spēle · laukuma formulas</div>
+      <h1>Kapibaras trase uz Figūru templi</h1>
+      <div class="sub">Tagad katrs skolēns ir savs varonis: viņš izvēlas <b>tēlu</b> un <b>auto</b>, un pēc katra pareizi atrisināta uzdevuma auto pārvietojas pa vizualizētu karti uz nākamo punktu.</div>
+    </div>
+    <div>
+      <button class="btn primary" id="teacherTab">Skolotāja režīms</button>
+      <button class="btn ghost" id="studentTab">Skolēna režīms</button>
+    </div>
+  </div>
+
+  <section id="teacherView">
+    <div class="grid two">
+      <div class="panel">
+        <div class="badge">UZ EKRĀNA</div>
+        <h2>Spēles ideja</h2>
+        <p>Skolēns iziet <b>16 punktu trasi</b>. Katrā punktā ir viens uzdevums. Punkti sadalīti pa zonām: paralelograms, trijstūris, rombs, trapece, dārgumu lādes un Gala Sargs.</p>
+        <div class="trackLegend">
+          <div class="legendItem">🟡 pašreizējais punkts</div>
+          <div class="legendItem">🟢 pabeigts punkts</div>
+          <div class="legendItem">🔒 vēl neatvērts</div>
+          <div class="legendItem">📦 dārgumu lāde</div>
+          <div class="legendItem">🗿 Gala Sargs</div>
+        </div>
+        <div class="callout" style="margin-top:14px"><b>Rezultāti:</b> bezmaksas versijā tie nesaglabājas kopīgi. Stundas beigās skolēns parāda gala ekrānu ar savākto punktu skaitu un gatavības līmeni.</div>
+      </div>
+      <div class="panel">
+        <h2 style="margin-top:0">QR piekļuve</h2>
+        <div class="teacherQr"><img id="qrImg" alt="QR kods"><span id="qrFallback">QR kods parādīsies, kad lapa būs atvērta tiešsaistē.</span></div>
+        <p class="small" id="urlText"></p>
+        <button class="btn good" id="demoBtn">Atvērt skolēna skatu</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="studentView" class="hidden">
+    <div id="setupView" class="panel">
+      <div class="badge">1. SOLIS</div>
+      <h2>Izvēlies savu tēlu un auto</h2>
+      <div class="grid two">
+        <div class="card">
+          <div class="small">Ievadi vārdu</div>
+          <input id="nameInput" value="Skolēns" style="margin-top:8px;background:#0b1220;border:1px solid #475569;border-radius:14px;padding:12px;color:#fff;min-width:220px;width:100%">
+          <h3>Tēls</h3>
+          <div id="avatarOptions" class="selector"></div>
+        </div>
+        <div class="card">
+          <h3>Auto</h3>
+          <div id="carOptions" class="selector"></div>
+          <div class="callout" style="margin-top:16px">Padoms: pēc katras pareizas atbildes Tavs auto pārbrauks uz nākamo punktu trasē.</div>
+        </div>
+      </div>
+      <button class="btn primary" id="startBtn" style="margin-top:14px">Sākt trasi</button>
+    </div>
+
+    <div id="gameView" class="hidden">
+      <div class="panel">
+        <div class="top">
+          <div>
+            <div class="badge">TRASE</div>
+            <h2 style="margin:6px 0 4px">Figūru ceļš</h2>
+            <div class="small" id="playerLabel">Ekspedīcija nav sākta</div>
+          </div>
+          <div class="stats">
+            <div class="stat">❤️<span class="v" id="lives">3</span></div>
+            <div class="stat">💎<span class="v" id="score">0</span></div>
+            <div class="stat">🏁<span class="v" id="stepNum">0/16</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <div class="panel">
+          <div class="mapWrap" id="mapWrap">
+            <svg class="roadSvg" viewBox="0 0 1000 560" preserveAspectRatio="none">
+              <path d="M95 485 C 170 420, 260 415, 330 435 S 480 500, 550 450 S 700 310, 790 330 S 930 420, 905 255 S 760 90, 615 140 S 430 250, 320 190 S 160 80, 105 135 S 85 290, 95 485" fill="none" stroke="#e2e8f0" stroke-width="18" stroke-linecap="round" stroke-dasharray="2 24" opacity="0.95"/>
+              <path d="M95 485 C 170 420, 260 415, 330 435 S 480 500, 550 450 S 700 310, 790 330 S 930 420, 905 255 S 760 90, 615 140 S 430 250, 320 190 S 160 80, 105 135 S 85 290, 95 485" fill="none" stroke="#94a3b8" stroke-width="28" stroke-linecap="round" opacity="0.22"/>
+            </svg>
+            <div class="mapDeco" style="left:7%;top:70%">🌲</div>
+            <div class="mapDeco" style="left:17%;top:24%">🏕️</div>
+            <div class="mapDeco" style="left:32%;top:32%">⛰️</div>
+            <div class="mapDeco" style="left:42%;top:76%">🌉</div>
+            <div class="mapDeco" style="left:70%;top:18%">💎</div>
+            <div class="mapDeco" style="left:84%;top:56%">🏰</div>
+            <div id="nodes"></div>
+            <div id="token" class="token hidden">
+              <div class="avatarBubble" id="tokenAvatar">🧑</div>
+              <div class="car" id="tokenCar">🚗</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div id="challengeView" class="panel hidden">
+            <div class="badge" id="challengeTag"></div>
+            <h2 id="challengeTitle"></h2>
+            <div class="formula" id="missionName" style="font-size:16px;margin-bottom:10px"></div>
+            <div id="challengeVisual"></div>
+            <p class="quest" id="challengeText"></p>
+            <div id="answers" class="answers"></div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+              <button class="btn ghost" id="hintBtn">💡 Mājiens</button>
+              <button class="btn ghost" id="formulaBtn">📜 Formulu karte</button>
+              <button class="btn ghost" id="supportBtn">🦉 5.6 atbalsts</button>
+            </div>
+            <div id="helpBox" class="help hidden"></div>
+            <div id="feedback" class="feedback"></div>
+          </div>
+
+          <div id="victoryView" class="panel hidden" style="text-align:center">
+            <div style="font-size:78px">🏆</div>
+            <h2>Tu sasniedzi Figūru templi!</h2>
+            <p id="victoryText"></p>
+            <div class="grid two" style="margin-top:10px">
+              <div class="card"><b>Punkti</b><div class="formula" id="summaryScore">0</div></div>
+              <div class="card"><b>Gatavība</b><div class="formula" id="rankText"></div></div>
+            </div>
+            <button class="btn good noPrint" id="certificateBtn" style="margin-top:14px">🎓 Atvērt sertifikātu</button>
+            <div id="certificateBox" class="certificate hidden">
+              <div class="seal">🏅</div>
+              <div style="font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:#92400e;font-weight:800">Sertifikāts</div>
+              <h2>Figūru tempļa ekspedīcija</h2>
+              <p>Ar šo apliecinām, ka</p>
+              <div class="certName" id="certName">Skolēns</div>
+              <p>ir veiksmīgi pabeidzis laukumu aprēķināšanas trasi par paralelogramu, trijstūri, rombu un trapeci.</p>
+              <div class="certScore">Rezultāts: <b id="certScore">0</b> punkti</div>
+              <div class="certRank" id="certRank">Gatavības līmenis</div>
+              <div class="certMeta"><span id="certDate">Datums</span><span>9. klases matemātika</span></div>
+            </div>
+            <button class="btn warn noPrint hidden" id="printCertBtn" style="margin-top:10px">🖨️ Drukāt / saglabāt PDF</button>
+            <button class="btn primary noPrint" id="restartBtn" style="margin-top:14px">Spēlēt vēlreiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Jaunā trases versija: skolēns = tēls + auto + vizualizēta karte</footer>
+</div>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const avatars = ['🧑‍🚀','👩‍🏫','🧑‍💻','👨‍🔬','👩‍🎨','🧑‍🎓'];
+  const cars = ['🚗','🚙','🏎️','🛻','🚕','🚓'];
+  const nodeMeta = [
+    ['Starts','start'],['Paralelograms 1','para'],['Paralelograms 2','para'],['Paralelograms 3','para'],['Lāde 1','chest'],['Trijstūris 1','tri'],['Trijstūris 2','tri'],['Trijstūris 3','tri'],['Rombs 1','rho'],['Rombs 2','rho'],['Rombs 3','rho'],['Lāde 2','chest'],['Trapece 1','trap'],['Trapece 2','trap'],['Trapece 3','trap'],['Gala Sargs','boss'],['Templis','finish']
+  ];
+  const points = [
+    {x:9,y:83},{x:18,y:74},{x:28,y:73},{x:38,y:77},{x:48,y:84},{x:58,y:79},{x:68,y:63},{x:79,y:58},{x:89,y:63},{x:91,y:46},{x:80,y:25},{x:63,y:23},{x:47,y:33},{x:32,y:31},{x:18,y:22},{x:10,y:31},{x:9,y:56}
+  ];
+  const state = {name:'Skolēns',avatar:avatars[0],car:cars[0],started:false,step:0,score:0,lives:3,route:[]};
+
+  const svg = {
+    para:`<div class="formula">S = a · h<sub>a</sub></div>`,
+    tri:`<div class="formula">S = (a · h<sub>a</sub>) / 2</div>`,
+    rho:`<div class="formula">S = (d<sub>1</sub> · d<sub>2</sub>) / 2</div>`,
+    trap:`<div class="formula">S = ((a + b) · h) / 2</div>`,
+    chest:`<div class="formula">📦 Nejaušais bonusa uzdevums</div>`,
+    boss:`<div class="formula">🗿 Gala Sarga pārbaudījums</div>`
+  };
+
+  const bank = {
+    para:[
+      {tag:'Paralelograms',title:'Slīpais kanjons',mission:'1. zona',visual:svg.para,text:'Paralelograma pamata garums ir 8 cm, bet tam atbilstošais augstums ir 5 cm. Aprēķini laukumu.',answers:['13 cm²','40 cm²','20 cm²'],correct:1,hint:'Laukumu aprēķina, reizinot pamata garumu ar tam atbilstošo augstumu.',formula:'S = a · h<sub>a</sub>',support:'1) Atrodi pamatu a. 2) Atrodi augstumu h_a. 3) Sareizini 8 un 5.'},
+      {tag:'Paralelograms',title:'Slīpais kanjons',mission:'2. zona',visual:svg.para,text:'Paralelograma laukums ir 63 cm², bet pamata garums ir 9 cm. Nosaki augstumu.',answers:['7 cm','6 cm','8 cm'],correct:0,hint:'Ja S = a · h_a, tad h<sub>a</sub> = S : a.',formula:'h<sub>a</sub> = S : a',support:'63 : 9 = 7.'},
+      {tag:'Paralelograms',title:'Slīpais kanjons',mission:'3. zona',visual:svg.para,text:'Kurš lielumu pāris ir vajadzīgs paralelograma laukuma aprēķināšanai?',answers:['pamats un augstums','sānu mala un diagonāle','divas diagonāles'],correct:0,hint:'Laukumam vajag figūras “apakšu” un perpendikulāro attālumu.',formula:'S = a · h<sub>a</sub>',support:'Atceries vārdus “pamata garums” un “tam atbilstošais augstums”.'},
+      {tag:'Paralelograms',title:'Slīpais kanjons',mission:'4. zona',visual:svg.para,text:'Paralelograma pamata garums ir 12,5 m, augstums ir 4 m. Cik liels ir laukums?',answers:['16,5 m²','50 m²','25 m²'],correct:1,hint:'12,5 · 4 = 50.',formula:'S = a · h<sub>a</sub>',support:'Reizini pamata garumu ar augstumu.'}
+    ],
+    tri:[
+      {tag:'Trijstūris',title:'Pusmēness grava',mission:'1. zona',visual:svg.tri,text:'Trijstūra pamata garums ir 12 cm, augstums ir 6 cm. Aprēķini laukumu.',answers:['36 cm²','72 cm²','18 cm²'],correct:0,hint:'Vispirms 12 · 6, tad rezultātu dala ar 2.',formula:'S = (a · h<sub>a</sub>) / 2',support:'12 · 6 = 72; 72 : 2 = 36.'},
+      {tag:'Trijstūris',title:'Pusmēness grava',mission:'2. zona',visual:svg.tri,text:'Trijstūra laukums ir 24 cm², bet augstums ir 6 cm. Nosaki pamata garumu.',answers:['8 cm','6 cm','12 cm'],correct:0,hint:'No vienādojuma 24 = (a · 6)/2 iegūsti a.',formula:'a = (2S) / h<sub>a</sub>',support:'2 · 24 = 48; 48 : 6 = 8.'},
+      {tag:'Trijstūris',title:'Pusmēness grava',mission:'3. zona',visual:svg.tri,text:'Kāpēc trijstūra laukuma formulā dala ar 2?',answers:['jo trijstūris ir puse no atbilstoša paralelograma','jo tā vajag vienmēr','jo izmanto diagonāles'],correct:0,hint:'Iedomājies divus vienādus trijstūrus, kas veido paralelogramu.',formula:'S = (a · h<sub>a</sub>) / 2',support:'Divi vienādi trijstūri kopā veido paralelogramu.'},
+      {tag:'Trijstūris',title:'Pusmēness grava',mission:'4. zona',visual:svg.tri,text:'Trijstūra pamata garums ir 14 m, augstums ir 5 m. Cik liels ir laukums?',answers:['70 m²','35 m²','28 m²'],correct:1,hint:'14 · 5 = 70; 70 : 2 = 35.',formula:'S = (a · h<sub>a</sub>) / 2',support:'Reizini, tad dali ar 2.'}
+    ],
+    rho:[
+      {tag:'Rombs',title:'Diagonāļu velve',mission:'1. zona',visual:svg.rho,text:'Romba diagonāļu garumi ir 10 cm un 8 cm. Aprēķini laukumu.',answers:['40 cm²','80 cm²','18 cm²'],correct:0,hint:'Diagonāļu reizinājumu dala ar 2.',formula:'S = (d<sub>1</sub> · d<sub>2</sub>) / 2',support:'10 · 8 = 80; 80 : 2 = 40.'},
+      {tag:'Rombs',title:'Diagonāļu velve',mission:'2. zona',visual:svg.rho,text:'Romba laukums ir 36 cm², viena diagonāle ir 9 cm. Nosaki otru diagonāli.',answers:['8 cm','6 cm','4 cm'],correct:0,hint:'No vienādojuma 36 = (9 · d_2)/2 iegūsti d_2.',formula:'d<sub>2</sub> = (2S) / d<sub>1</sub>',support:'72 : 9 = 8.'},
+      {tag:'Rombs',title:'Diagonāļu velve',mission:'3. zona',visual:svg.rho,text:'Kurš apgalvojums ir pareizs?',answers:['Romba laukumu var aprēķināt, reizinot diagonāles un dalot ar 2','Romba laukums ir visu malu summa','Romba laukums ir pamata garuma un diagonāles reizinājums'],correct:0,hint:'Pareizā formula satur abas diagonāles.',formula:'S = (d<sub>1</sub> · d<sub>2</sub>) / 2',support:'Meklē atbildi ar d_1 un d_2.'},
+      {tag:'Rombs',title:'Diagonāļu velve',mission:'4. zona',visual:svg.rho,text:'Romba diagonāļu garumi ir 14 dm un 6 dm. Cik liels ir laukums?',answers:['84 dm²','42 dm²','20 dm²'],correct:1,hint:'14 · 6 = 84; 84 : 2 = 42.',formula:'S = (d<sub>1</sub> · d<sub>2</sub>) / 2',support:'Diagonāļu reizinājuma puse.'}
+    ],
+    trap:[
+      {tag:'Trapece',title:'Trapeces tilts',mission:'1. zona',visual:svg.trap,text:'Trapeces paralēlo pamatu garumi ir 8 cm un 14 cm, augstums ir 5 cm. Aprēķini laukumu.',answers:['55 cm²','110 cm²','27,5 cm²'],correct:0,hint:'Vispirms saskaiti pamatus, tad reizini ar augstumu un dali ar 2.',formula:'S = ((a + b) · h) / 2',support:'(8 + 14) · 5 = 110; 110 : 2 = 55.'},
+      {tag:'Trapece',title:'Trapeces tilts',mission:'2. zona',visual:svg.trap,text:'Trapeces laukums ir 36 m², bet paralēlo pamatu garumi ir 4 m un 8 m. Nosaki augstumu.',answers:['6 m','3 m','8 m'],correct:0,hint:'No vienādojuma 36 = ((4+8)·h)/2 iegūsti h.',formula:'h = (2S) / (a + b)',support:'72 : 12 = 6.'},
+      {tag:'Trapece',title:'Trapeces tilts',mission:'3. zona',visual:svg.trap,text:'Kuru darbību skolēni visbiežāk aizmirst trapeces laukuma formulā?',answers:['dalīšanu ar 2','saskaitīšanu','reizina ar augstumu'],correct:0,hint:'Trapeces laukuma formulā pēc reizināšanas vēl ir viena darbība.',formula:'S = ((a + b) · h) / 2',support:'Atceries — rezultāts jādala ar 2.'},
+      {tag:'Trapece',title:'Trapeces tilts',mission:'4. zona',visual:svg.trap,text:'Trapeces paralēlo pamatu garumi ir 12 dm un 6 dm, augstums ir 4 dm. Aprēķini laukumu.',answers:['36 dm²','72 dm²','18 dm²'],correct:0,hint:'(12 + 6) · 4 = 72; 72 : 2 = 36.',formula:'S = ((a + b) · h) / 2',support:'Saskaiti, reizini, tad dali ar 2.'}
+    ],
+    chest:[
+      {tag:'Dārgumu lāde',title:'Bonusa uzdevums',mission:'Lāde I',visual:svg.chest,text:'Kura formula atbilst romba laukuma aprēķināšanai?',answers:['S = a · h_a','S = (d_1 · d_2) / 2','S = (a+b) · h'],correct:1,hint:'Meklē formulu ar diagonālēm.',formula:'S = (d<sub>1</sub> · d<sub>2</sub>) / 2',support:'Rombam bieži izmanto diagonāļu garumus.'},
+      {tag:'Dārgumu lāde',title:'Bonusa uzdevums',mission:'Lāde II',visual:svg.chest,text:'Trijstūra laukums ir 18 cm², pamata garums ir 9 cm. Nosaki augstumu.',answers:['4 cm','2 cm','6 cm'],correct:0,hint:'2 · 18 = 36; 36 : 9 = 4.',formula:'h<sub>a</sub> = (2S) / a',support:'No laukuma formulas izsaki h_a.'},
+      {tag:'Dārgumu lāde',title:'Bonusa uzdevums',mission:'Lāde III',visual:svg.chest,text:'Kurai figūrai pietiek ar pamata garumu un tam atbilstošo augstumu, lai aprēķinātu laukumu bez dalīšanas ar 2?',answers:['paralelogramam','trijstūrim','trapecei'],correct:0,hint:'Trijstūrim un trapecei ir dalījums ar 2.',formula:'S = a · h<sub>a</sub>',support:'Tā ir paralelograma formula.'},
+      {tag:'Dārgumu lāde',title:'Bonusa uzdevums',mission:'Lāde IV',visual:svg.chest,text:'Romba laukums ir 24 dm², viena diagonāle ir 6 dm. Otra diagonāle ir ...',answers:['8 dm','4 dm','6 dm'],correct:0,hint:'2 · 24 = 48; 48 : 6 = 8.',formula:'d<sub>2</sub> = (2S) / d<sub>1</sub>',support:'Izmanto romba laukuma formulu.'}
+    ],
+    boss:[
+      {tag:'Gala Sargs',title:'Pēdējais pārbaudījums',mission:'Boss 1',visual:svg.boss,text:'Paralelograma laukums ir 72 cm², pamata garums ir 8 cm. Nosaki augstumu.',answers:['9 cm','8 cm','10 cm'],correct:0,hint:'72 : 8 = 9.',formula:'h<sub>a</sub> = S : a',support:'Laukumu dala ar pamata garumu.'},
+      {tag:'Gala Sargs',title:'Pēdējais pārbaudījums',mission:'Boss 2',visual:svg.boss,text:'Trapeces paralēlo pamatu garumi ir 9 cm un 15 cm, augstums ir 4 cm. Aprēķini laukumu.',answers:['48 cm²','96 cm²','60 cm²'],correct:0,hint:'(9 + 15) · 4 = 96; 96 : 2 = 48.',formula:'S = ((a + b) · h) / 2',support:'Saskaiti pamatus, reizini ar augstumu un dali ar 2.'},
+      {tag:'Gala Sargs',title:'Pēdējais pārbaudījums',mission:'Boss 3',visual:svg.boss,text:'Romba diagonāļu garumi ir 12 cm un 10 cm. Aprēķini laukumu.',answers:['120 cm²','60 cm²','22 cm²'],correct:1,hint:'12 · 10 = 120; 120 : 2 = 60.',formula:'S = (d<sub>1</sub> · d<sub>2</sub>) / 2',support:'Diagonāļu reizinājuma puse.'}
+    ]
+  };
+
+  function shuffle(arr){ return arr.map(v=>({v,r:Math.random()})).sort((a,b)=>a.r-b.r).map(x=>x.v); }
+
+  function buildRoute(){
+    const route = [];
+    route.push(...shuffle(bank.para).slice(0,3));
+    route.push(shuffle(bank.chest).slice(0,1)[0]);
+    route.push(...shuffle(bank.tri).slice(0,3));
+    route.push(...shuffle(bank.rho).slice(0,3));
+    route.push(shuffle(bank.chest).slice(1,2)[0] || shuffle(bank.chest)[0]);
+    route.push(...shuffle(bank.trap).slice(0,3));
+    route.push(...shuffle(bank.boss).slice(0,2));
+    return route;
+  }
+
+  function renderSelectors(){
+    const avWrap = $('#avatarOptions');
+    const carWrap = $('#carOptions');
+    avatars.forEach((a,i)=>{
+      const el = document.createElement('div');
+      el.className = 'option' + (i===0 ? ' selected':'');
+      el.innerHTML = `<span class="big">${a}</span><div>Tēls ${i+1}</div>`;
+      el.onclick = ()=>{ document.querySelectorAll('#avatarOptions .option').forEach(o=>o.classList.remove('selected')); el.classList.add('selected'); state.avatar = a; };
+      avWrap.appendChild(el);
+    });
+    cars.forEach((c,i)=>{
+      const el = document.createElement('div');
+      el.className = 'option' + (i===0 ? ' selected':'');
+      el.innerHTML = `<span class="big">${c}</span><div>Auto ${i+1}</div>`;
+      el.onclick = ()=>{ document.querySelectorAll('#carOptions .option').forEach(o=>o.classList.remove('selected')); el.classList.add('selected'); state.car = c; };
+      carWrap.appendChild(el);
+    });
+  }
+
+  function renderNodes(){
+    const wrap = $('#nodes');
+    wrap.innerHTML = '';
+    points.forEach((p,i)=>{
+      const node = document.createElement('div');
+      node.className = 'node';
+      if(i < state.step) node.classList.add('done');
+      else if(i === state.step) node.classList.add('current');
+      else node.classList.add('locked');
+      let label = i===0?'S':(i===16?'🏰':i);
+      if(i===4 || i===11) label='📦';
+      if(i===15) label='🗿';
+      node.textContent = label;
+      node.style.left = p.x + '%';
+      node.style.top = p.y + '%';
+      wrap.appendChild(node);
+
+      const nl = document.createElement('div');
+      nl.className = 'nodeLabel';
+      nl.textContent = nodeMeta[i][0];
+      nl.style.left = p.x + '%';
+      nl.style.top = p.y + '%';
+      wrap.appendChild(nl);
+    });
+    if(state.started){
+      const t = $('#token');
+      const pos = points[Math.min(state.step, points.length-1)];
+      $('#tokenAvatar').textContent = state.avatar;
+      $('#tokenCar').textContent = state.car;
+      t.classList.remove('hidden');
+      t.style.left = pos.x + '%';
+      t.style.top = pos.y + '%';
+    }
+  }
+
+  function updateTeacherQr(){
+    const url = location.href;
+    $('#urlText').textContent = url.startsWith('file:') ? 'Publicētā lapā te būs īstā saite.' : url;
+    if(!url.startsWith('file:')){
+      const qf = $('#qrFallback'); if(qf) qf.remove();
+      $('#qrImg').src = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='+encodeURIComponent(url);
+    } else {
+      $('#qrImg').style.display = 'none';
+    }
+  }
+
+  function switchMode(mode){
+    $('#teacherView').classList.toggle('hidden', mode !== 'teacher');
+    $('#studentView').classList.toggle('hidden', mode !== 'student');
+  }
+
+  function refresh(){
+    $('#playerLabel').textContent = `${state.name} · Tava mašīna dodas uz punktu ${Math.min(state.step+1,16)} no 16}`;
+    $('#lives').textContent = state.lives;
+    $('#score').textContent = state.score;
+    $('#stepNum').textContent = `${Math.min(state.step,16)}/16`;
+    renderNodes();
+  }
+
+  function currentTask(){
+    return state.route[state.step-1];
+  }
+
+  function openTask(){
+    const task = currentTask();
+    if(!task){ showVictory(); return; }
+    $('#challengeView').classList.remove('hidden');
+    $('#victoryView').classList.add('hidden');
+    $('#challengeTag').textContent = task.tag;
+    $('#challengeTitle').textContent = task.title;
+    $('#missionName').textContent = `Punkts ${state.step} no 16 · ${task.mission}`;
+    $('#challengeVisual').innerHTML = task.visual;
+    $('#challengeText').textContent = task.text;
+    $('#helpBox').classList.add('hidden');
+    $('#feedback').textContent = '';
+    const answersWrap = $('#answers'); answersWrap.innerHTML = '';
+    const mixed = shuffle(task.answers.map((text, idx)=>({text, idx})));
+    mixed.forEach((ans, i)=>{
+      const b = document.createElement('button');
+      b.className = 'answer';
+      b.innerHTML = `<b>${String.fromCharCode(65+i)}.</b> ${ans.text}`;
+      b.onclick = ()=>checkAnswer(ans.idx === task.correct);
+      answersWrap.appendChild(b);
+    });
+    $('#hintBtn').onclick = ()=>showHelp('hint');
+    $('#formulaBtn').onclick = ()=>showHelp('formula');
+    $('#supportBtn').onclick = ()=>showHelp('support');
+  }
+
+  function showHelp(kind){
+    const task = currentTask();
+    const box = $('#helpBox');
+    if(kind==='hint') box.innerHTML = `<b>💡 Mājiens:</b> ${task.hint}`;
+    if(kind==='formula') box.innerHTML = `<b>📜 Formula:</b> ${task.formula}`;
+    if(kind==='support') box.innerHTML = `<b>🦉 5.6 atbalsts:</b> ${task.support}`;
+    box.classList.remove('hidden');
+  }
+
+  function checkAnswer(correct){
+    if(correct){
+      state.score += 5;
+      $('#feedback').textContent = '✅ Pareizi! Auto brauc tālāk pa trasi.';
+      state.step += 1;
+      refresh();
+      if(state.step > 16){
+        setTimeout(showVictory, 700);
+      } else {
+        setTimeout(openTask, 700);
+      }
+    } else {
+      state.lives = Math.max(0, state.lives - 1);
+      state.score = Math.max(0, state.score - 1);
+      $('#feedback').textContent = '❌ Nepareizi. Pamēģini vēlreiz vai izmanto palīdzību.';
+      if(state.lives === 0){
+        state.lives = 1;
+        showHelp('support');
+      }
+      refresh();
+    }
+  }
+
+  function showVictory(){
+    $('#challengeView').classList.add('hidden');
+    $('#victoryView').classList.remove('hidden');
+    $('#summaryScore').textContent = state.score;
+    let rank = '🟢 Gatavs pārbaudes darbam';
+    if(state.score < 55) rank = '🟡 Vēl jāpatrenējas';
+    if(state.score < 38) rank = '🔴 Vajag vēl vienu atkārtojumu';
+    $('#rankText').textContent = rank;
+    $('#victoryText').textContent = `${state.name}, Tu veiksmīgi izbrauci visu trasi un sasniedzi Figūru templi!`;
+    $('#certName').textContent = state.name;
+    $('#certScore').textContent = state.score;
+    $('#certRank').textContent = rank;
+    $('#certDate').textContent = 'Datums: ' + new Date().toLocaleDateString('lv-LV');
+    $('#certificateBox').classList.add('hidden');
+    $('#printCertBtn').classList.add('hidden');
+  }
+
+  $('#teacherTab').onclick = ()=>switchMode('teacher');
+  $('#studentTab').onclick = ()=>switchMode('student');
+  $('#demoBtn').onclick = ()=>switchMode('student');
+  $('#startBtn').onclick = ()=>{
+    state.name = $('#nameInput').value.trim() || 'Skolēns';
+    state.started = true;
+    state.score = 0;
+    state.lives = 3;
+    state.step = 1; // starts at first task node after start
+    state.route = buildRoute();
+    $('#setupView').classList.add('hidden');
+    $('#gameView').classList.remove('hidden');
+    refresh();
+    openTask();
+  };
+  $('#certificateBtn').onclick = ()=>{
+    $('#certificateBox').classList.remove('hidden');
+    $('#printCertBtn').classList.remove('hidden');
+    $('#certificateBox').scrollIntoView({behavior:'smooth',block:'center'});
+  };
+  $('#printCertBtn').onclick = ()=>window.print();
+
+  $('#restartBtn').onclick = ()=>{
+    $('#victoryView').classList.add('hidden');
+    $('#setupView').classList.remove('hidden');
+    $('#gameView').classList.add('hidden');
+    state.started = false;
+    state.step = 0;
+    state.score = 0;
+    state.lives = 3;
+    renderNodes();
+  };
+
+  renderSelectors();
+  renderNodes();
+  updateTeacherQr();
+})();
+</script>
+</body>
+</html>
